@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+:root {
+    --pink: #FFB6C1;
+    --mint: #A4E5C3;
+    --peach: #FFD8A9;
+    --lavender: #D4C3FF;
+    --yellow: #FFF2A7;
+    --text: #444;
+    --radius: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--mint), var(--peach), var(--pink));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background: #fff;
+    width: 340px;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+h2 {
+    margin-bottom: 22px;
+    color: var(--text);
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* INPUT WRAP */
+
+.input-wrap {
+    position: relative;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 42px;
+    margin: 6px 0 15px 0;
+    border-radius: var(--radius);
+    border: 2px solid #eee;
+    transition: 0.25s;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: var(--pink);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.35);
+}
+
+
+/* EYE BUTTON */
+
+.eye-btn {
+    position: absolute;
+    right: 12px;
+    top: 45%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #aaa;
+    transition: .25s;
+}
+
+.eye-btn:hover {
+    color: var(--pink);
+}
+
+
+/* BUTTON */
+
+button {
+    width: 100%;
+    background: var(--pink);
+    border: none;
+    color: #fff;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+button:hover {
+    background: var(--lavender);
+}
+
+
+/* LINK */
+
+a {
+    margin-top: 15px;
+    color: var(--pink);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+/* SHAKE ANIM */
+
+.shake {
+    animation: shake .3s ease;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

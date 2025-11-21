@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+:root {
+    --lavender: #e6d9ff;
+    /* ungu macaron */
+    --yellow: #fff6b3;
+    /* kuning macaron */
+    --navy: #1e2a45;
+    /* aksen gelap */
+    --white: #ffffff;
+    --radius: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--lavender), var(--yellow));
+    min-height: 100vh;
+    padding-top: 80px;
+    /* supaya konten ga ketutup navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* ================= NAVBAR FIXED ================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    border-bottom: 3px solid var(--lavender);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+/* kiri */
+
+.nav-left {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+
+/* kanan (tombol) */
+
+.nav-right {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    background: var(--navy);
+    color: var(--white);
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.25s;
+    display: inline-block;
+}
+
+.nav-btn:hover {
+    background: #2f3f5f;
+    transform: translateY(-2px);
+}
+
+
+/* notif badge */
+
+.badge {
+    background: crimson;
+    padding: 2px 6px;
+    font-size: 11px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+
+/* ================= HEADING ================= */
+
+h2,
+h3 {
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+
+/* ================= FORM ================= */
+
+form {
+    background: var(--white);
+    padding: 22px;
+    border-radius: var(--radius);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    width: 350px;
+}
+
+label {
+    font-weight: 500;
+    color: var(--navy);
+}
+
+select,
+input[type=number],
+input[type=text] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    background: #f9f9f9;
+    border: 2px solid #ddd;
+    transition: 0.25s;
+}
+
+select:focus,
+input:focus {
+    border-color: var(--lavender);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(230, 217, 255, 0.5);
+}
+
+
+/* tombol */
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    background: var(--navy);
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #2f3f5f;
+}
+
+
+/* ================= TABLE ================= */
+
+table {
+    width: 100%;
+    background: var(--white);
+    border-collapse: collapse;
+    margin-top: 14px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+table th {
+    background: var(--lavender);
+    color: var(--navy);
+    padding: 10px;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+
+/* status */
+
+.status-menunggu {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.status-proses {
+    color: #2196f3;
+    font-weight: bold;
+}
+
+.status-selesai {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+
+/* ================= CARD UNTUK H2 & H3 ================= */
+
+.section-card {
+    background: var(--white);
+    padding: 18px 22px;
+    margin: 18px auto;
+    width: 90%;
+    max-width: 900px;
+    border-radius: var(--radius);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid var(--navy);
+    text-align: left;
+}
+
+.section-card h2,
+.section-card h3 {
+    margin: 0;
+    color: var(--navy);
+}
+
+
+/* ================= NAVBTN SAMA KAYA DI CUSTOMER.PHP ================= */
+
+.nav-right a {
+    text-decoration: none;
+    background: var(--navy);
+    color: var(--white);
+    padding: 8px 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.25s;
+}
+
+.nav-right a:hover {
+    background: #2f3f5f;
+    transform: translateY(-2px);
+}
